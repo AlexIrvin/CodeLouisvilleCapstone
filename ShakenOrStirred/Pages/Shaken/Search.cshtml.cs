@@ -8,6 +8,7 @@ using System.Net.Http.Formatting;
 using System.Diagnostics;
 using System;
 using System.Text.Json;
+using System.Collections.Generic;
 
 namespace ShakenOrStirred.Pages.Shaken
 {
@@ -27,6 +28,8 @@ namespace ShakenOrStirred.Pages.Shaken
         private string urlParameters = "?api_key=1&s=margarita";
         public DrinkList drinks { get; set; }
 
+        public List<DrinkList> DrinkSet = new List<DrinkList>();
+
         public async Task<IActionResult> OnGetLoadSearchAsync()
         {
             HttpClient client = new HttpClient();
@@ -39,25 +42,18 @@ namespace ShakenOrStirred.Pages.Shaken
             // List data response.
             HttpResponseMessage response = await client.GetAsync(urlParameters);
             var stream = await client.GetStringAsync(urlParameters);
-            drinks = JsonSerializer.Deserialize<DrinkList>(stream);
-            Recipe = drinks?.Drinks;
+            DrinkList DrinkSet = JsonSerializer.Deserialize<DrinkList>(stream);
 
             if (response.IsSuccessStatusCode)
             {
-                // Parse the response body.
-                foreach (var d in drinks.Drinks)
-                {
-                    var strDrink = d.strDrink;
-                    var strInstructions = d.strInstructions;
-                    var strIngredient1 = d.strIngredient1;
 
-                }
+                
+ 
             }
             else
             {
                 Debug.WriteLine("{0} ({1})", (int)response.StatusCode, response.ReasonPhrase);
             }
-
             // Make any other calls using HttpClient here.
 
             // Dispose once all HttpClient calls are complete.

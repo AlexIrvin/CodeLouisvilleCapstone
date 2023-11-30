@@ -1,26 +1,9 @@
 ﻿@page
 @using ShakenOrStirred.Model
-@model ShakenOrStirred.Pages.Shaken.SearchModel
+@model ShakenOrStirred.Pages.Shaken.IndexModel
 @{
 }
-<div class="border container" style="padding:30px;">
-    <form method="post">
-        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
-        <div class="form-group row">
-            <div class="col-3">
-                <label>Drink Name</label>
-            </div>
-            <div class="col-6">
-                <input class="form-control" />
-            </div>
-        </div>
-        <span class="text-danger"></span>
-        <div class="form-group row">
-            <div class="col-3 offset-3">
-                <button onclick="location.href='@Url.Page("Search", "loadSearch")'">Search</button>
-            </div>
-        </div>
-    </form>
+
 
     <table>
         <thead>
@@ -32,19 +15,22 @@
         </thead>
         <tbody>
 
-            @foreach (var d in Model.Drink)
+            @foreach (var d in Model.DrinkSet)
             {
-                <tr>
-                    <td>
-                        @d.strDrink
-                    </td>
-                    <td>
-                        @d.strInstructions
-                    </td>
-                    <td>
-                        @d.strIngredient1
-                    </td>
-                </tr>
+                foreach (var a in d.Drinks)
+                {
+                    <tr>
+                        <td>
+                            @a.strDrink
+                        </td>
+                        <td>
+                            @a.strInstructions
+                        </td>
+                        <td>
+                            @a.strIngredient1
+                        </td>
+                    </tr>
+                }
             }
 
 
