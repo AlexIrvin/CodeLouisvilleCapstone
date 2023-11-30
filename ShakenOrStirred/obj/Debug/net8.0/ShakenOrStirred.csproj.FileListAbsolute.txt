@@ -445,3 +445,4 @@ C:\Users\alexI\source\repos\ShakenOrStirred\ShakenOrStirred\bin\Debug\net8.0\Sys
 C:\Users\alexI\source\repos\ShakenOrStirred\ShakenOrStirred\bin\Debug\net8.0\System.Net.Http.Extensions.dll
 C:\Users\alexI\source\repos\ShakenOrStirred\ShakenOrStirred\bin\Debug\net8.0\System.Net.Http.Formatting.dll
 C:\Users\alexI\source\repos\ShakenOrStirred\ShakenOrStirred\bin\Debug\net8.0\System.Net.Http.Primitives.dll
+C:\Users\alexI\source\repos\ShakenOrStirred\ShakenOrStirred\obj\Debug\net8.0\ShakenOrStirred.sourcelink.json

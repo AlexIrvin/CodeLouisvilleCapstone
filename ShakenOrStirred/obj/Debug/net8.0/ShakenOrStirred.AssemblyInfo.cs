@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ShakenOrStirred")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4c96151e362f7c579b18537a21121bb12b58cf4c")]
 [assembly: System.Reflection.AssemblyProductAttribute("ShakenOrStirred")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ShakenOrStirred")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

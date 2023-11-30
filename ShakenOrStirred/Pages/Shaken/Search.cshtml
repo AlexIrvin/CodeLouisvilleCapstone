@@ -1,4 +1,5 @@
 ﻿@page
+@using ShakenOrStirred.Model
 @model ShakenOrStirred.Pages.Shaken.SearchModel
 @{
 }
@@ -10,14 +11,78 @@
                 <label>Drink Name</label>
             </div>
             <div class="col-6">
-                <input asp-for="Drink.strDrink" class="form-control" />
+                <input class="form-control" />
             </div>
         </div>
-        <span asp-validation-for="Drink.strDrink" class="text-danger"></span>
+        <span class="text-danger"></span>
         <div class="form-group row">
             <div class="col-3 offset-3">
                 <button onclick="location.href='@Url.Page("Search", "loadSearch")'">Search</button>
             </div>
         </div>
     </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Drink Name</th>
+                <th>Instructions</th>
+                <th>Ingredient</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var d in Model.Drink)
+            {
+                <tr>
+                    <td>
+                        @d.strDrink
+                    </td>
+                    <td>
+                        @d.strInstructions
+                    </td>
+                    <td>
+                        @d.strIngredient1
+                    </td>
+                </tr>
+            }
+
+
+        </tbody>
+    </table>
+
 </div>
+@*              <table class="table table-striped border">
+    <tr class="table-secondary">
+    <th>
+    <label asp-for="Drinks.FirstOrDefault()"></label>
+    </th>
+    <th>
+    <label asp-for="Drinks.FirstOrDefault()"></label>
+    </th>
+    <th>
+    <label asp-for="Drinks.FirstOrDefault()"></label>
+    </th>
+    <th>
+
+    </th>
+    </tr> *@
+@*                     @foreach (var drink in Model.Drink)
+    {
+    <tr>
+    <td>
+    @Html.DisplayFor(m=>item.Name)
+    </td>
+    <td>
+    @Html.DisplayFor(m=>item.Author)
+    </td>
+    <td>
+    @Html.DisplayFor(m=>item.ISBN)
+    </td>
+    <td>
+    <button asp-page-handler="Delete" asp-route-id="@item.Id" onclick="return confirm('Are you sure you want to delete?')" class="btn btn-danger btn-sm">Delete</button>
+    <a asp-page="Edit" asp-route-id="@item.Id" class="btn btn-success btn-sm text-white">Edit</a>
+    </td>
+    </tr>
+    }
+    *@

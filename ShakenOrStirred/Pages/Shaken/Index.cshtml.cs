@@ -5,6 +5,7 @@ namespace ShakenOrStirred.Pages.Shaken
 {
     public class IndexModel : PageModel
     {
+
         public void OnGet()
         {
         }

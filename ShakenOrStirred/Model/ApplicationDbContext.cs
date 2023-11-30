@@ -9,6 +9,6 @@ namespace ShakenOrStirred.Model
         {
         }
 
-        public DbSet<DrinkModel> Drink { get; set; }
+        public List<Drink> Drinks { get; set; }
     }
 }
