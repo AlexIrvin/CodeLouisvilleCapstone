@@ -1,5 +1,6 @@
 ﻿@page
-@model IndexModel
+@using ShakenOrStirred.Model
+@model ShakenOrStirred.Pages.Shaken.SearchModel
 @{
     ViewData["Title"] = "Home page";
 }
@@ -14,7 +15,7 @@
 </div>
 
 <div class="border container" style="padding:30px;">
-    <form method="post">
+    <form method="get">
         <div class="text-danger" asp-validation-summary="ModelOnly"></div>
         <div class="form-group row">
             <div class="col-3">
@@ -27,7 +28,11 @@
         <span class="text-danger"></span>
         <div class="form-group row">
             <div class="col-3 offset-3">
-                <button onclick="location.href='@Url.Page("Search", "loadSearch")'">Search</button>
+                <form asp-page-handler="Search" method="get">
+                    <button asp-page ="/Shaken/Search" class="btn btn-default">Search</button>
+                </form>
             </div>
         </div>
     </form>
+@*     onclick="location.href='@Url.Page("Search", "loadSearch")'"
+ *@

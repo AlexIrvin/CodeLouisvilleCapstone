@@ -1,9 +1,10 @@
 ﻿@page
 @using ShakenOrStirred.Model
-@model ShakenOrStirred.Pages.Shaken.IndexModel
+@model ShakenOrStirred.Pages.Shaken.SearchModel
 @{
 }
 
+@Url.Page("Search", "loadSearch")
 
     <table>
         <thead>
@@ -17,7 +18,13 @@
 
             @foreach (var d in Model.DrinkSet)
             {
-                foreach (var a in d.Drinks)
+            <tr>
+                <td>
+                    @d.Drinks
+                </td>
+
+            </tr>
+@*                 foreach (var a in d.Drinks)
                 {
                     <tr>
                         <td>
@@ -31,7 +38,7 @@
                         </td>
                     </tr>
                 }
-            }
+ *@            }
 
 
         </tbody>

@@ -30,7 +30,7 @@ namespace ShakenOrStirred.Pages.Shaken
 
         public List<DrinkList> DrinkSet = new List<DrinkList>();
 
-        public async Task<IActionResult> OnGetLoadSearchAsync()
+        public async Task<IActionResult> OnPostSearch()
         {
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(URL);
