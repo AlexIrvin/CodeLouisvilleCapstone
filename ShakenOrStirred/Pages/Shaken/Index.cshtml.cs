@@ -34,28 +34,23 @@ namespace ShakenOrStirred.Pages.Shaken
             // Create a new instance of HttpClient
             using (var HttpClient = new HttpClient())
             {
-                // Set the base address of the API
+                // Call the API
                 using (HttpResponseMessage response = await HttpClient.GetAsync("http://www.thecocktaildb.com/api/json/v1/1/search.php?api_key=1&s=margarita"))
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();
                     DrinkList drinkList = JsonConvert.DeserializeObject<DrinkList>(apiResponse);
                     DrinkSet = drinkList.Drinks.ToList();
                     //return new JsonResult(DrinkSet);
-                    return new JsonResult(DrinkSet);
-
+                    DeserializeJsonResult(new JsonResult(DrinkSet));
+                    return RedirectToPage("/Shaken/Search");
                 }
-
-
-                    // Send a GET request to the API endpoint
-
-                // Check if the request was successful
 
             }
 
         }
-        public List<Drink> DeserializeJsonResult(JsonResult jsonResult)
+        public List<Drink> DeserializeJsonResult(JsonResult DrinkSet)
         {
-            string json = JsonConvert.SerializeObject(jsonResult.Value);
+            string json = JsonConvert.SerializeObject(DrinkSet.Value);
             List<Drink> drinks = JsonConvert.DeserializeObject<List<Drink>>(json);
             return drinks;
         }
