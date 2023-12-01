@@ -1,81 +1,46 @@
 ﻿@page
 @using ShakenOrStirred.Model
-@model ShakenOrStirred.Pages.Shaken.SearchModel
+@model ShakenOrStirred.Pages.Shaken.IndexModel
 @{
 }
 
-@Url.Page("Search", "loadSearch")
 
-    <table>
-        <thead>
+<table>
+    <thead>
+        <tr>
+            <th>Drink Name</th>
+            <th>Instructions</th>
+            <th>Ingredient</th>
+        </tr>
+    </thead>
+    <tbody>
+
+
+        @* @foreach (var d in List2)
+        {
             <tr>
-                <th>Drink Name</th>
-                <th>Instructions</th>
-                <th>Ingredient</th>
+                    <td>
+                        @d.Drinks
+                    </td>
             </tr>
-        </thead>
-        <tbody>
-
-            @foreach (var d in Model.DrinkSet)
+            foreach (var a in d.Drinks)
             {
-            <tr>
-                <td>
-                    @d.Drinks
-                </td>
-
-            </tr>
-@*                 foreach (var a in d.Drinks)
-                {
-                    <tr>
-                        <td>
-                            @a.strDrink
-                        </td>
-                        <td>
-                            @a.strInstructions
-                        </td>
-                        <td>
-                            @a.strIngredient1
-                        </td>
-                    </tr>
-                }
- *@            }
+                <tr>
+                    <td>
+                        @a.strDrink
+                    </td>
+                    <td>
+                        @a.strInstructions
+                    </td>
+                    <td>
+                        @a.strIngredient1
+                    </td>
+                </tr>
+            }
+        } *@
 
 
-        </tbody>
-    </table>
+    </tbody>
+</table>
 
 </div>
-@*              <table class="table table-striped border">
-    <tr class="table-secondary">
-    <th>
-    <label asp-for="Drinks.FirstOrDefault()"></label>
-    </th>
-    <th>
-    <label asp-for="Drinks.FirstOrDefault()"></label>
-    </th>
-    <th>
-    <label asp-for="Drinks.FirstOrDefault()"></label>
-    </th>
-    <th>
-
-    </th>
-    </tr> *@
-@*                     @foreach (var drink in Model.Drink)
-    {
-    <tr>
-    <td>
-    @Html.DisplayFor(m=>item.Name)
-    </td>
-    <td>
-    @Html.DisplayFor(m=>item.Author)
-    </td>
-    <td>
-    @Html.DisplayFor(m=>item.ISBN)
-    </td>
-    <td>
-    <button asp-page-handler="Delete" asp-route-id="@item.Id" onclick="return confirm('Are you sure you want to delete?')" class="btn btn-danger btn-sm">Delete</button>
-    <a asp-page="Edit" asp-route-id="@item.Id" class="btn btn-success btn-sm text-white">Edit</a>
-    </td>
-    </tr>
-    }
-    *@

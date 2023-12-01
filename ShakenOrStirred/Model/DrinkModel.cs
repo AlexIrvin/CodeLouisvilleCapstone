@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System.Text.Json.Serialization;
 
 namespace ShakenOrStirred.Model;
@@ -7,7 +6,7 @@ namespace ShakenOrStirred.Model;
 public class DrinkList
 {
     [JsonPropertyName("drinks")]
-    public List<Drink> Drinks { get; set; }
+    public IEnumerable<Drink> Drinks { get; set; }
 }
 
 public class Drink
