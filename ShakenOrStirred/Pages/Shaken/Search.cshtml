@@ -3,44 +3,53 @@
 @model ShakenOrStirred.Pages.Shaken.IndexModel
 @{
 }
+@section scripts {
+    <script type="text/javascript">
+        $(function () {
+            $.post('/Shaken/Index?handler=OnPostLoadSearch').done(function (drinks) {
+                $.each(drinks, function (i, drink) {
+                    var item = `<tr>
+                                            <td>${drinks.strDrink}</td>
+                                            <td>${drinks.strInstructions}</td>
+                                            <td>${drinks.strIngredient1}</td>
+                                            </tr>`;
+                    $('tbody').append(item);
+                });
+            });
+        });
+    </script>
+}
+
+<div class="border container" style="padding:30px;">
+    <form method="post" action="/Shaken/Index?handler=OnPostLoadSearch">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label for="drinkName">Drink Name</label>
+            </div>
+            <div class="col-6">
+                <input class="form-control" id="drinkName" name="drinkName" />
+            </div>
+        </div>
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group row">
+            <div class="col-3 offset-3">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </div>
+    </form>
 
 
-<table>
-    <thead>
-        <tr>
-            <th>Drink Name</th>
-            <th>Instructions</th>
-            <th>Ingredient</th>
-        </tr>
-    </thead>
-    <tbody>
-
-
-        @* @foreach (var d in List2)
-        {
+    <table class="table">
+        <thead>
             <tr>
-                    <td>
-                        @d.Drinks
-                    </td>
+                <th>Drink Name</th>
+                <th>Instructions</th>
+                <th>Ingredient</th>
             </tr>
-            foreach (var a in d.Drinks)
-            {
-                <tr>
-                    <td>
-                        @a.strDrink
-                    </td>
-                    <td>
-                        @a.strInstructions
-                    </td>
-                    <td>
-                        @a.strIngredient1
-                    </td>
-                </tr>
-            }
-        } *@
-
-
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
 
 </div>

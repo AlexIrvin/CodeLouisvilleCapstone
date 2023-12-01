@@ -4251,11 +4251,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alexI\\source\\repos\\ShakenOrStirred\\ShakenOrStirred\\ShakenOrStirred.csproj",
+      "projectUniqueName": "C:\\Users\\alexI\\source\\repos\\CodeLouisvilleCapstone\\ShakenOrStirred\\ShakenOrStirred.csproj",
       "projectName": "ShakenOrStirred",
-      "projectPath": "C:\\Users\\alexI\\source\\repos\\ShakenOrStirred\\ShakenOrStirred\\ShakenOrStirred.csproj",
+      "projectPath": "C:\\Users\\alexI\\source\\repos\\CodeLouisvilleCapstone\\ShakenOrStirred\\ShakenOrStirred.csproj",
       "packagesPath": "C:\\Users\\alexI\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alexI\\source\\repos\\ShakenOrStirred\\ShakenOrStirred\\obj\\",
+      "outputPath": "C:\\Users\\alexI\\source\\repos\\CodeLouisvilleCapstone\\ShakenOrStirred\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

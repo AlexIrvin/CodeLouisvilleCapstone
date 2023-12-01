@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6U323zv87p/sELYBNiluLes+rKNzO5/TUOmzyTSppnqcGk0eBR439s/vPKQ2Vao/mGH0QRO5Mlk61Gc0qKLw3Q==",
+  "dgSpecHash": "cptknW6cPyoS5Nzsxui+nLzdaLf9LoEJISSnXAMAySRTotlrWDZ+D4rmbe535E67y9xg6f2FeIkPuHDjyhfLCA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\alexI\\source\\repos\\ShakenOrStirred\\ShakenOrStirred\\ShakenOrStirred.csproj",
+  "projectFilePath": "C:\\Users\\alexI\\source\\repos\\CodeLouisvilleCapstone\\ShakenOrStirred\\ShakenOrStirred.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alexI\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\alexI\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

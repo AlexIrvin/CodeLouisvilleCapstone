@@ -11,6 +11,7 @@ public class DrinkList
 
 public class Drink
 {
+
     public string idDrink { get; set; } = default!;
     public string strDrink { get; set; } = default!;
     public object strDrinkAlternate { get; set; } = default!;
