@@ -29,7 +29,7 @@ namespace ShakenOrStirred.Pages.Shaken
         public List<Drink> DrinkSet {get; set;}
 
         [HttpPost]
-        public async Task<List<Drink>> OnPostLoadSearch()
+        public async Task<IActionResult> OnPostLoadSearch()
         {
             // Create a new instance of HttpClient
             using (var HttpClient = new HttpClient())
@@ -41,7 +41,7 @@ namespace ShakenOrStirred.Pages.Shaken
                     DrinkList drinkList = JsonConvert.DeserializeObject<DrinkList>(apiResponse);
                     DrinkSet = drinkList.Drinks.ToList();
                     //return new JsonResult(DrinkSet);
-                    return DrinkSet;
+                    return new JsonResult(DrinkSet);
 
                 }
 
